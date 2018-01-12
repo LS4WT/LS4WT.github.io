@@ -1,4 +1,5 @@
 #eof-upgradeMod {
+	font-weight: bold;
 	color: #0da7d1;
     background: #0a0404cf;
     position: absolute;
@@ -31,6 +32,7 @@
 	transition-delay: 750ms;
 }
 #eof-upgradeInput {
+	margin-top: 10px;
 	color: #0da7d1;
     background-color: #061a26d6;
     background-image: none;
