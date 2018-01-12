@@ -1,0 +1,108 @@
+#eof-upgradeMod {
+	color: #0da7d1;
+    background: #0a0404cf;
+    position: absolute;
+    right: -156px;
+    width: 160px;
+    height: 250px;
+    border-radius: 10px 0 0 10px;
+    border: 1px #076186 solid;
+    -webkit-transition: right 150ms;
+    transition: right 150ms;
+	transition-delay: 750ms;
+}
+#eof-upgradeMod:hover, #eof-upgradeHover:hover #eof-upgradeMod {
+	right: -1px;
+	transition-delay: 0ms;
+}
+#eof-upgradeHover:hover {
+	width: 160px;
+	transition-delay: 0ms;
+}
+#eof-upgradeHover {
+	overflow: hidden;
+	position: absolute;
+	right: 0px;
+	width: 10px;
+	height: 250px;
+	background: transparent;
+	-webkit-transition: width 150ms;
+	transition: width 150ms;
+	transition-delay: 750ms;
+}
+#eof-upgradeInput {
+	color: #0da7d1;
+    background-color: #061a26d6;
+    background-image: none;
+    border: 1px solid #0da7d1;
+    width: 80px;
+    border-radius: 5px;
+	text-align: center;
+	-moz-appearance:textfield;
+}
+#eof-upgradeInput::-webkit-inner-spin-button,
+#eof-upgradeInput::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+    margin: 0;
+}
+#eof-upgradeCall {
+    border-radius: 5px;
+    background: #076186;
+    border: 1px solid #0da7d1;
+    width: 80px;
+    color: #eee;
+	transition: all .2s;
+}
+#eof-upgradeCall:hover {
+	background: #0da7d1;
+}
+.eof-radio:checked,
+.eof-radio:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+.eof-radio:checked + label,
+.eof-radio:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    display: inline-block;
+    color: #1c6b9a;
+}
+.eof-radio:checked + label {
+	color: #0da7d1;
+}
+.eof-radio:checked + label:before,
+.eof-radio:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #0da7d1;
+    border-radius: 100%;
+    background: #061a26d6;
+}
+.eof-radio:checked + label:after,
+.eof-radio:not(:checked) + label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #0da7d1;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.eof-radio:not(:checked) + label:after {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.eof-radio:checked + label:after {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
