@@ -1,0 +1,373 @@
+<html>
+	<head>
+		<title>StreamLegends Item-DB</title>
+	</head>
+	<body>
+		<style>
+			@font-face{
+				font-family:Roboto-Regular;
+				font-style:normal;
+				font-weight:400;
+				src:local("Roboto"),local("Roboto-Regular"),url(https://cdn.streamlegends.com/_/static/9f916e330c478bbfa2a0dd6614042046.eot) format("embedded-opentype"),url(https://cdn.streamlegends.com/_/static/16e1d930cf13fb7a956372044b6d02d0.woff) format("woff"),url(https://cdn.streamlegends.com/_/static/7e367be02cd17a96d513ab74846bafb3.woff2) format("woff2"),url(https://cdn.streamlegends.com/_/static/3d3a53586bd78d1069ae4b89a3b9aa98.svg) format("svg"),url(https://cdn.streamlegends.com/_/static/38861cba61c66739c1452c3a71e39852.ttf) format("truetype")
+			}
+			@font-face{
+				font-family:Roboto-Medium;
+				font-style:normal;
+				font-weight:500;
+				src:local("Roboto Medium"),local("Roboto-Medium"),url(https://cdn.streamlegends.com/_/static/2a52a20f9a56010ec5d985abe9bebcc9.eot) format("embedded-opentype"),url(https://cdn.streamlegends.com/_/static/57af64fc644194101c1593abea164433.woff) format("woff"),url(https://cdn.streamlegends.com/_/static/bb474f16c9f76f522d656d66aa4a220e.woff2) format("woff2"),url(https://cdn.streamlegends.com/_/static/f1d811cdfaea49c969500d4bbe52251b.svg) format("svg"),url(https://cdn.streamlegends.com/_/static/88f29ea5a372d06f521395134f62ab91.ttf) format("truetype")
+			}
+			@font-face{
+				font-family:Roboto-Light;
+				font-style:normal;
+				font-weight:300;
+				src:local("Roboto Light"),local("Roboto-Light"),url(https://cdn.streamlegends.com/_/static/c3547b2ec6f5eb324b44d8a0c6b2dd31.eot) format("embedded-opentype"),url(https://cdn.streamlegends.com/_/static/ecce92d0b0ff17197f29e7db6397bf0a.woff) format("woff"),url(https://cdn.streamlegends.com/_/static/16ddb1541046ada9b90cacf4adec839a.woff2) format("woff2"),url(https://cdn.streamlegends.com/_/static/1edaa6e50c2302bf0221d252e1caebb4.svg) format("svg"),url(https://cdn.streamlegends.com/_/static/634f53eb79efa455a9e9d85d608b3447.ttf) format("truetype")
+			}
+			@font-face{
+				font-family:Roboto-Heavy;
+				font-style:normal;
+				font-weight:700;
+				src:local("Roboto Bold"),local("Roboto-Bold"),url(https://cdn.streamlegends.com/_/static/128879da78c6c8eb4e2c07fa3732cea7.eot) format("embedded-opentype"),url(https://cdn.streamlegends.com/_/static/525d5b452809b3172a2a34e26d9db546.woff) format("woff"),url(https://cdn.streamlegends.com/_/static/0d7e71f2b5cc1ddab837f72e1fe52f3f.woff2) format("woff2"),url(https://cdn.streamlegends.com/_/static/7f57c4c0f3b44acbe338d7ff6d6ee5b1.svg) format("svg"),url(https://cdn.streamlegends.com/_/static/ad97d029a11d8b39692037e753d23d1f.ttf) format("truetype")
+			}
+			@font-face{
+				font-family:DINPro-Regular;
+				font-style:normal;
+				font-weight:400;
+				src:local("DINPro"),local("DINPro-Regular"),url(https://cdn.streamlegends.com/_/static/5c964e00a421f399b2e7cfea8c228350.eot) format("embedded-opentype"),url(https://cdn.streamlegends.com/_/static/83c5f1aa2f4f5c12e1234f01d37d596d.woff) format("woff"),url(https://cdn.streamlegends.com/_/static/75d2dd86eeb936e905d50d064145dca5.woff2) format("woff2"),url(https://cdn.streamlegends.com/_/static/92e03761430104d7e0b967806610a226.svg) format("svg"),url(https://cdn.streamlegends.com/_/static/86fda98796bb4100ba905535a77723bd.ttf) format("truetype")
+			}
+			@font-face{
+				font-family:DINPro-Medium;
+				font-style:normal;
+				font-weight:500;
+				src:local("DINPro Medium"),local("DINPro-Medium"),url(https://cdn.streamlegends.com/_/static/c694eb6aae5c61b1809bfb33f12f4776.eot) format("embedded-opentype"),url(https://cdn.streamlegends.com/_/static/b57ff64c1150b965d9a7d161fb955749.woff) format("woff"),url(https://cdn.streamlegends.com/_/static/95b44e0b6040e0503fe21b25e4b3d9f1.woff2) format("woff2"),url(https://cdn.streamlegends.com/_/static/18e391c8fa2b3a46a62f717cadee2e13.svg) format("svg"),url(https://cdn.streamlegends.com/_/static/48a3635ce1e76c0122a143b076f51adf.ttf) format("truetype")
+			}
+		
+			html {
+				zoom: 1.15; 
+				-moz-transform: scale(1.15); 
+				-moz-transform-origin: 0 0;
+				background: #191a2a;
+				text-rendering:auto;
+				background-image:url(547a80b91b43b78c12e36b8233cdcdcf.jpg);
+				background-size:cover;
+				-webkit-tap-highlight-color: transparent;
+			}
+			body {
+				overflow: hidden;
+				font-size: 14px;
+				font-family: DINPro-Regular,Roboto-Regular,Arial,"sans-serif";
+				font-weight: 400;
+				font-style: normal;
+			}
+			#global-container {
+				position: absolute;
+				top: 37px;
+				left: 0;
+				right: 0;
+				height: calc(100% - 37px);
+				width: 100%;
+				overflow: hidden;
+			}
+			#list-container {
+				width: 100%;
+				height: 100%;
+				overflow-y: scroll;
+				padding-left:10px;
+				padding-right: 17px;
+			}
+			.legendary {
+				border: 1px solid #ff372e;
+				color: #ff372e;
+			}
+			.epic {
+				border: 1px solid #ff7900;
+				color: #ff7900;
+			}
+			.rare {
+				border: 1px solid #8d86c9;
+				color: #8d86c9;
+			}
+			.uncommon {
+				border: 1px solid #48a9a6;
+				color: #48a9a6;
+			}
+			.common {
+				border: 1px solid #9b9b9b;
+				color: #9b9b9b;
+			}
+			.item-details-container {
+				color: #efefef;
+				vertical-align: top;
+				width: calc(25% - 10px);
+				min-width: 100px;
+				max-width: 280px;
+				display: inline-block;
+				margin: 5px;
+				/* padding: 10px; */
+				
+				opacity: .98;
+				-ms-flex-preferred-size: 200px;
+				flex-basis: 200px;
+				border-radius: 3px;
+				/** border: 1px solid #00a6d1; **/
+				background-color: #142d42;
+				color: #fff;
+				margin-right: 2px;
+				
+				font-family: DINPro-Medium,Roboto-Medium,Arial,"sans-serif";
+				font-weight: 400;
+				font-style: normal;	
+			}
+			header {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 35px;
+				background: #131d2f;
+				width: 100%;
+				border-bottom: 1px solid #0f5d86;
+			}
+			header button {
+				color: #eee;
+				background: #0f5d86;
+				border: 1px solid #0f5d86;
+				height: 33px;
+				width: calc(20% - 4px);
+				min-width: 70px;
+				transition: background .2s;
+			}
+			header button:hover, header button.active {
+				background: #142d42;
+			}
+			.item-name {
+				border: 0;
+				font-family: DINPro-Bold,Roboto-Heavy,Arial,"sans-serif";
+				font-weight: bold;
+				font-style: normal;
+				font-size: 10px;
+				text-transform: uppercase;
+				text-align: center;
+				margin: 10px;
+			}
+			.item-level {
+				margin: 4px;
+				font-size: 10px;
+				text-transform: uppercase;
+				text-align: center;
+				font-family: DINPro-Bold,Roboto-Heavy,Arial,"sans-serif";
+				font-weight: bold;
+				font-style: normal;
+			}
+					
+			.item-properties, .item-skills {
+				padding: 0 0 0 2px;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-flow: row wrap;
+				flex-flow: row wrap;
+			}
+			.item-property {
+
+			}
+			.item-details-skill {
+
+			}
+			.item-prop-value {
+				font-size: 12px;
+				color: #fff;
+			}
+			.skill-description {
+				font-size: 10px;
+				color: #fff;
+				text-align: center;
+			}
+			.item-property, .item-details-skill {
+				flex-basis: 80px;
+				-ms-flex-positive: 1;
+				flex-grow: 1;
+				-ms-flex-negative: 1;
+				flex-shrink: 1;
+				margin: 0 2px 2px 0;
+				background-color: #191a2a;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-flow: column nowrap;
+				flex-flow: column nowrap;
+				-ms-flex-align: center;
+				align-items: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				padding: 5px;
+			}
+			.skill-name, .item-prop-name {
+				margin-top: 4px;
+				font-size: 9px;
+				color: #647078;
+				text-transform: uppercase;
+				text-align: center;
+				font-family: DINPro-Bold,Roboto-Heavy,Arial,"sans-serif";
+				font-weight: bold;
+				font-style: normal;
+			}
+			
+
+		</style>
+		<header>
+			<center>
+			<button type="button" onclick="listItems(items.heads)">Heads</button>
+			<button type="button" onclick="listItems(items.armors)">Armors</button>
+			<button type="button" onclick="listItems(items.pants)">Pants</button>
+			<button type="button" onclick="listItems(items.weapons)">Weapons</button>
+			<button type="button" onclick="listItems(items.shields)">Shields</button>
+			</center>
+		</header>
+		<div id='global-container'>
+			<div id='list-container'>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="SLItems.js"></script>
+<script src="SLBuffs.js"></script>
+<script>
+function statValue(s, v) {
+	switch (s) {
+		case 'ATTACK_SPEED':
+		case 'BLOCK_CHANCE':
+		case 'CRIT_CHANCE':
+		case 'CRIT_MULT':
+		case 'DODGE_CHANCE':
+		case 'MISS_CHANCE':
+		case 'RESIST_PHYSICAL':
+		case 'RESIST_COLD':
+		case 'RESIST_FIRE':
+		case 'RESIST_LIGHTNING': return ((v > 0) ? '+' : '')+Math.trunc(100*v)+'%';
+		case 'DAMAGE': return v.min+"-"+v.max;
+		default: return v;
+	}
+}
+function statName(s) {
+	switch (s) {
+		case 'ARMOR':return"Armor";
+		case 'ATTACK_SPEED':return "Attack Speed";
+		case 'BLOCK_CHANCE':return "Block Chance";
+		case 'COOLDOWN':return"Cooldown";
+		case 'CRIT_CHANCE':return"Crit Chance";
+		case 'CRIT_MULT':return"Crit Mult";
+		case 'DAMAGE':return"Damage";
+		case 'DODGE_CHANCE':return "Dodge Chance";
+		case 'HP':return"HP";
+		case 'MAX_HP':return "Max HP";
+		case 'MISS_CHANCE':return "Miss Chance";
+		case 'RESIST_COLD':return "Cold Resistance";
+		case 'RESIST_FIRE':return "Fire Resistance";
+		case 'RESIST_LIGHTNING':return "Lightning Resistance";
+		case 'RESIST_PHYSICAL':return "Physical Resistance";
+		case 'lightning':return "Lightning Damage";
+		case 'cold':return "Cold Damage";
+		case 'fire':return "Fire Damage";
+		case 'physical':return "Physical Damage";
+	}
+}
+function getWord(s) {
+    return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+}
+
+function listItems(list) {
+	var cont = document.getElementById('list-container');
+	cont.innerHTML = '';
+	
+	var cat = {
+		common: document.createElement('div'),
+		uncommon: document.createElement('div'),
+		rare: document.createElement('div'),
+		epic: document.createElement('div'),
+		legendary: document.createElement('div')
+	}
+	for (var d in cat) void cont.appendChild(cat[d]);
+	
+	var c = 0, holder;
+	for (var id in list) {
+		var i = list[id];
+		var d = document.createElement('div');
+		d.className = 'item-details-container '+i.rarity;
+		/**
+		var html = i.name +'<br>Required Level: '+i.min_player_level+'<br>Cooldown: '+i.cooldown;
+		if (i.mods) {
+			for (var s of i.mods) {
+				var k = s.stat.toUpperCase();
+				html += '<br>'+statName(k)+': '+statValue(k, s.value);
+			}
+		} else {
+			html += '<br>Damage: '+statValue('DAMAGE', i.damage);
+			html += '<br>Type: '+i.damage.type;
+			html += '<br>'+(!~id.indexOf('_2h_') ? 'One' : 'Two')+'-handed';
+		}
+		if (i.skills) for (var k of i.skills) {
+				var s = skills[k];
+				html += '<br>'+s.name+': '+s.description;
+			}
+		**/
+		var html = '<div class="item-name '+i.rarity+'">'+i.name+'</div>'
+				 + '<div class="item-level">Required Level: '+i.min_player_level+'</div>'
+				 + '<div class="item-properties">';
+		// go through properties
+		if (i.damage) {
+			html += '<div class="item-property">'
+				  + '<div class="item-prop-value">'+statValue('DAMAGE', i.damage)+'</div>'
+				  + '<div class="item-prop-name">'+statName(i.damage.type)+'</div>'
+				  + '</div>';
+		}
+		html += '<div class="item-property">'
+			  + '<div class="item-prop-value">'+i.cooldown+'</div>'
+			  + '<div class="item-prop-name">Cooldown</div>'
+			  + '</div>';
+		if (i.mods) {
+			for (var s of i.mods) {
+				var k = s.stat.toUpperCase();
+				html += '<div class="item-property">'
+					  + '<div class="item-prop-value">'+statValue(k, s.value)+'</div>'
+					  + '<div class="item-prop-name">'+statName(k)+'</div>'
+					  + '</div>';
+			}
+		}
+		// Gearscore
+		var t = Number(id.split('_tier_')[1]);
+		t = {common:-2,uncommon:0,rare:6,epic:25,legendary:63}[i.rarity] + {common:3,uncommon:6,rare:9,epic:15,legendary:21}[i.rarity] * t;
+		if (~id.indexOf('_2h_')) t *= 2;
+		
+		html += '<div class="item-property">'
+			  + '<div class="item-prop-value">'+t+'</div>'
+			  + '<div class="item-prop-name">Gear Score</div>'
+			  + '</div>';
+		
+		html += '</div>'; // end properties
+		
+		if (i.skills) {
+			html += '<div class="item-skills">'; // start skills
+			for (var k of i.skills) {
+				var s = skills[k];
+				html += '<div class="item-details-skill">'
+					  + '<div class="skill-description">'+s.description+'</div>'
+					  + '<div class="skill-name">'+s.name+'</div>'
+					  + '</div>';
+			}
+			html += '</div>'; //end skills
+		}
+		d.innerHTML = html;
+		if (!(c%4)) {
+			holder = document.createElement('div');
+			holder.align = 'center';
+			void cat[i.rarity].appendChild(holder);
+		} c++;
+		void holder.appendChild(d);
+	}
+}
+listItems(items.weapons)
+/*
+listItems(items.heads)
+listItems(items.armors)
+listItems(items.pants)
+listItems(items.shields)
+*/
+</script>
