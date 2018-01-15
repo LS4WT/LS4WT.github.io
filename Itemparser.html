@@ -291,23 +291,6 @@ function listItems(list) {
 		var i = list[id];
 		var d = document.createElement('div');
 		d.className = 'item-details-container '+i.rarity;
-		/**
-		var html = i.name +'<br>Required Level: '+i.min_player_level+'<br>Cooldown: '+i.cooldown;
-		if (i.mods) {
-			for (var s of i.mods) {
-				var k = s.stat.toUpperCase();
-				html += '<br>'+statName(k)+': '+statValue(k, s.value);
-			}
-		} else {
-			html += '<br>Damage: '+statValue('DAMAGE', i.damage);
-			html += '<br>Type: '+i.damage.type;
-			html += '<br>'+(!~id.indexOf('_2h_') ? 'One' : 'Two')+'-handed';
-		}
-		if (i.skills) for (var k of i.skills) {
-				var s = skills[k];
-				html += '<br>'+s.name+': '+s.description;
-			}
-		**/
 		var html = '<div class="item-name '+i.rarity+'">'+i.name+'</div>'
 				 + '<div class="item-level">Required Level: '+i.min_player_level+'</div>'
 				 + '<div class="item-properties">';
@@ -364,10 +347,4 @@ function listItems(list) {
 	}
 }
 listItems(items.weapons)
-/*
-listItems(items.heads)
-listItems(items.armors)
-listItems(items.pants)
-listItems(items.shields)
-*/
 </script>
